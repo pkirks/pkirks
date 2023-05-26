@@ -11,7 +11,7 @@ def SumDigits(num:int) -> None:
     return None
     
 #driver
-SumDigits(365)
+#SumDigits(365)
 
 
 def sum_digits(n:int) -> int:
@@ -23,6 +23,54 @@ def sum_digits(n:int) -> int:
     print (summation)
     return summation
     
+#Driver
+#sum_digits(365)
+
+
+
+def BubbleSort(lizt:list, Type:str) ->None:
+    '''
+    inefficient sort, comparing neighbours in a nested loop. Often multiple times 
+    2nd arg determines sort type, asc= ascending, dec= decending, all other strings return without sorting
+    '''
+    
+    Length= len(lizt)
+    
+    if Type == 'asc':
+        for i in range(Length):
+           # print(i)
+            for j in range (0, Length-i -1):
+            #print(i,j)
+                if lizt[j] > lizt[j+1]:
+                    lizt[j], lizt[j+1] = lizt[j+1], lizt[j]
+        print(lizt)
+    elif Type == 'dec':
+        for i in range(Length):
+           # print(i)
+            for j in range (0, Length-i -1):
+            #print(i,j)
+                if lizt[j] < lizt[j+1]:
+                    lizt[j], lizt[j+1] = lizt[j+1], lizt[j]
+                    
+        print(lizt)
+        
+    else:
+        print(lizt)
+    
     
 #Driver
-sum_digits(365)
+#BubbleSort([2,23,10,1],'pen')
+
+
+def SelectionSort(lizt:list) -> None:
+    Sorted = []
+    smallest = min(lizt)
+    Sorted.append(smallest)
+    #print(Sorted)
+    
+    for i in range(len(lizt)):
+        
+
+#Driver
+SelectionSort([7,2,1,6])
+
