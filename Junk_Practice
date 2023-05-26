@@ -63,14 +63,19 @@ def BubbleSort(lizt:list, Type:str) ->None:
 
 
 def SelectionSort(lizt:list) -> None:
-    Sorted = []
-    smallest = min(lizt)
-    Sorted.append(smallest)
-    #print(Sorted)
     
-    for i in range(len(lizt)):
+    for smallest in range(len(lizt)):
+        min_index = smallest
+        for i in range(smallest+1, len(lizt)):
+            
+            if lizt[i] < lizt[min_index]:
+                min_index = i
         
-
+        (lizt[smallest], lizt[min_index]) = (lizt[min_index], lizt[smallest])
+        
+    print(lizt)
 #Driver
 SelectionSort([7,2,1,6])
+
+
 
