@@ -1,0 +1,28 @@
+def SumDigits(num:int) -> None:
+    Count=0
+    AsList=[str(num)]
+    for i in AsList:
+        for j in i:
+            #print(k)
+            k=int(j)
+            Count+=k
+    print(Count)
+    
+    return None
+    
+#driver
+SumDigits(365)
+
+
+def sum_digits(n:int) -> int:
+    summation= 0
+    while n:
+        #print(n)
+        summation += n % 10
+        n //=10
+    print (summation)
+    return summation
+    
+    
+#Driver
+sum_digits(365)
